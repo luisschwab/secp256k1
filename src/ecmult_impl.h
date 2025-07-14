@@ -54,7 +54,8 @@
 /* Minimum number of points for which pippenger_wnaf is faster than strauss wnaf */
 #define ECMULT_PIPPENGER_THRESHOLD 88
 
-#define ECMULT_MAX_POINTS_PER_BATCH 5000000
+/* Reduced from 5000000 so it fits in the MSP430F5529 (only 8KB of RAM) */
+#define ECMULT_MAX_POINTS_PER_BATCH 16000
 
 /** Fill a table 'pre_a' with precomputed odd multiples of a.
  *  pre_a will contain [1*a,3*a,...,(2*n-1)*a], so it needs space for n group elements.
